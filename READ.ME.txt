@@ -1,0 +1,34 @@
+To run this, start by installing Node.js 4.3.1 (https://nodejs.org/en/)
+
+Once installed open up a shell and cd to this directory
+
+Do the following:
+
+1. Check node is installed by typing: 
+
+>>node -v 
+
+(you should see 4.3.1)
+
+2. Next type:
+
+>>npm install
+
+(You should see a lot of output)
+
+3. Once that is finished type:
+
+>>npm start
+
+(Output should be:
+ > tutorial@0.0.0 start C:\Users\Liam\Desktop\tutorial
+ > node ./bin/www)
+
+4. open a browser and navigate to http://localhost:3000/
+
+You should see a very basic web page
+
+Open app.js, routes.js and public/index.html and try and learn whats going on. 
+Read my comments for help.
+
+See http://expressjs.com/ for documentation about express.
