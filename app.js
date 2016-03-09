@@ -85,10 +85,11 @@ app.post('/gift', function(req, res) {
   var min = req.body.minPrice;
   var max = req.body.maxPrice;
   console.log(kword,min,max);
-  client.get('/listings/active', {keywords: kword, sort_on:"score", limit: 1, min_price: min, max_price: max}, function (err, status, body, headers) {
+  client.get('/listings/active', {keywords: kword, sort_on:"score", limit: 100, min_price: min, max_price: max}, function (err, status, body, headers) {
       //res.redirect(body.results[0].url);
      // console.log(body.results[0].url);
-      res.send(body.results[0].url);
+      var rand = Math.floor((Math.random() * 100) + 1);
+      res.send(body.results[rand].url);
     });
   });
 
