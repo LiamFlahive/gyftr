@@ -13,7 +13,7 @@ etsyjs = require('etsy-js');
 client = etsyjs.client({
   key: 'u78pp7t5m8r64kdinu48on4c',
   secret: '971jw20t5h',
-  callbackURL: 'http://localhost:3000/authorise'
+  callbackURL: 'gyftr.herokuapp.com/authorise'
 });
 
 app = express();
