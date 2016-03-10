@@ -13,7 +13,7 @@ etsyjs = require('etsy-js');
 client = etsyjs.client({
   key: 'u78pp7t5m8r64kdinu48on4c',
   secret: '971jw20t5h',
-  callbackURL: 'http://localhost:3000/authorise'
+  callbackURL: 'https://gyftr.herokuapp.com/authorise'
 });
 
 app = express();
@@ -22,7 +22,7 @@ app.use(cookieParser('secEtsy'));
 
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
-
+     
 app.use(session());
 
 app.use(bodyParser.json());
@@ -94,6 +94,6 @@ app.post('/gift', function(req, res) {
   });
 
 
-server = app.listen(3000, function() {
+server = app.listen(process.env.PORT || 3000, function() {
   return console.log('Listening on port %d', server.address().port);
 });
